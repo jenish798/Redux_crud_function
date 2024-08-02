@@ -1,3 +1,5 @@
-import { userList } from "./data";
+import {userList} from "./data/data";
+import string from "./string/commonstring";
+import handleChange from './function/commonfunction'
 
-export default {userList}
+export {userList,string,handleChange}

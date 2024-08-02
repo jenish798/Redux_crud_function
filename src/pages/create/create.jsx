@@ -2,6 +2,8 @@ import React, { useState } from 'react'
 import { addUser } from '../../UserReducer'
 import  {useDispatch,useSelector} from 'react-redux'
 import { useNavigate } from 'react-router-dom'
+import { string } from '../../utils'
+import { FormInput } from '../../components'
 
 
 
@@ -21,21 +23,33 @@ const Create = () => {
         navigate('/')
     }
 
+    const {newuser,names,emails,submit}=string
+
   return (
     <div className='d-flex w-100 vh-100 justify-content-center align-items-center'>
         <div className='w-full border bg-secondary text-white p-5'>
-            <h3>Add New User</h3>
-            <form onSubmit={handleSubmit}>
+            <h3>{newuser}</h3>
+            {/* <form onSubmit={handleSubmit}>
                 <div>
-                    <label htmlFor='name'>Name</label>
-                    <input type="text" name='name' className='form-control' placeholder='enter name' onChange={e=> setName(e.target.value)} />
+                    <label htmlFor='name'>{names}</label>
+                    <input type="text" className='form-control' placeholder='enter name' 
+                    onChange={e=> setName(e.target.value)} />
                 </div>
                 <div>
-                    <label htmlFor='email'>Email</label>
-                    <input type="email" name='email' className='form-control' placeholder='enter mail-id' onChange={e=> setEmail(e.target.value)} />
+                    <label htmlFor='email'>{emails}</label>
+                    <input type="email"  className='form-control' placeholder='enter mail-id' 
+                    onChange={e=> setEmail(e.target.value)} />
                 </div><br/>
-                <button className='btn-btn-info'>Submit</button>
-            </form>
+                <button className='btn-btn-info'>{submit}</button>
+            </form> */}
+            <FormInput 
+                names='Name' 
+                emails='Email' 
+                submit='Submit' 
+                onNameChange={setName} 
+                onEmailChange={setEmail} 
+                onSubmit={handleSubmit} 
+            />
 
         </div>
     </div>
