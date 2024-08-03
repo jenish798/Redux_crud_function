@@ -12,6 +12,9 @@ const string={
     submit:'Submit',
     create:'create',
     update:'Update',
+    text:'text',
+    placeholdername:'Enter Name',
+    placeholderemail:'Enter Email id',
 }
 
 export default string

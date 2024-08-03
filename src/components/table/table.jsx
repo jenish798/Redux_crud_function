@@ -28,9 +28,8 @@ import {Link, useNavigate} from 'react-router-dom'
 <td>{user?.name}</td>
 <td>{user?.email}</td>
 <td>
-    <Link to={`/edit/${user.id}`} className='btn btn-sm btn-primary'>{editbtn}</Link>
+    <Link to={`/update/${user.id}`} className='btn btn-sm btn-primary'>{editbtn}</Link>
     <button onClick={() =>handleDelete(user.id)} className='btn btn-sm btn-danger ms-2'>{deletebtn}</button>
-    {/* <Deletebutton onClick={() => handleDelete(user.id)} name={deletebtn}/> */}
 </td>
     </tr>
 ))}

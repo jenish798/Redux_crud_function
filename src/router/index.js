@@ -1,4 +1,4 @@
-import routed from './rout'
-import paths from './path'
+import routed from './rout/rout'
+import paths from './path/path'
 
 export {routed,paths}
